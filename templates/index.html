@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+
+    <title>Calculadora de IMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <form action="/calcular" method="post">
+        <label for="numero1">Peso em quilos:</label>
+        <input type="text" name="numero1"><br>
+        <label for="numero2">Altura em metros:</label>
+        <input type="text" name="numero2"><br>
+        <select name="operacao">
+            <option value="IMC">Cálcule seu IMC</option>
+        </select><br>
+        <button type="submit">Calcular</button>
+    </form>
+    <p>Índice De Massa Corporal: {{ resultado }}</p>
+    <p>Pré-Obesidade: {{ preobesidade }}</p>
+    <p>Obesidade grau 1: {{ obesidade1 }}</p>
+    <p>Obesidade grau 2: {{ obesidade2 }}</p>
+    <p>Desnutrição: {{ desnutricao }}</p>
+</body>
+</html>
